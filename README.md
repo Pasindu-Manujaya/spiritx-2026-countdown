@@ -29,11 +29,6 @@ You can host this on any static web server or GitHub Pages. No backend or npm re
 - CSS
 - Vanilla JavaScript
 
-## 📸 Screenshot (Optional)
-
-_Add a screenshot of the countdown page here._
-
----
 
 Happy coding! 🎉
 
