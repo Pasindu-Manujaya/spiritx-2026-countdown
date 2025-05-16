@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Countdown Config</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #150564;
+      text-align: center;
+    }
+
+    h2 {
+      color: #ea0b0b;
+    }
+
+    input[type="datetime-local"] {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    #status {
+      margin-top: 15px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h2>Set SpiritX 2026 Countdown Date</h2>
+  <input type="datetime-local" id="newDate">
+  <button onclick="saveDate()">Save</button>
+  <p id="status"></p>
+  <img src="danger.png"/>
+  <script>
+    function saveDate() {
+      const dateInput = document.getElementById("newDate").value;
+      if (!dateInput) {
+        document.getElementById("status").innerText = "Please select a date and time.";
+        return;
+      }
+
+      localStorage.setItem("spiritxDate", dateInput);
+      document.getElementById("status").innerText = "🎉 Countdown date saved!";
+    }
+  </script>
+</body>
+</html>
